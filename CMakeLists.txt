@@ -3,5 +3,5 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(untitled "Lab num1/matrix.cpp"
-        "Lab num1/matrix_oop.h")
+add_executable(untitled "lab_num1/matrix.cpp"
+        "lab_num1/matrix_oop.h")
