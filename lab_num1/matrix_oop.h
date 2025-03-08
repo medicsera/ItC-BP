@@ -24,6 +24,9 @@ public:
     Matrix_opp(Matrix_opp&& other);
     ~Matrix_opp();
 
+    int get_rows() const;
+    int get_cols() const;
+
     bool EqMatrix(const Matrix_opp& other);
     void SumMatrix(const Matrix_opp& other);
     void SubMatrix(const Matrix_opp& other);
