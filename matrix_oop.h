@@ -5,10 +5,17 @@
 #ifndef UNTITLED_MATRIX_OOP_H
 #define UNTITLED_MATRIX_OOP_H
 
+#pragma once
+
 class Matrix_opp{
 private:
     int rows_, cols_;
     double** matrix_;
+
+    void MemoryAllocation();
+    void MemoryDealocation();
+    Matrix_opp Minor(int rows, int cols);
+
 
 public:
     Matrix_opp();
@@ -37,7 +44,10 @@ public:
     Matrix_opp operator-=(const Matrix_opp& other);
     Matrix_opp operator*=(const double other);
     Matrix_opp operator*=(const Matrix_opp& other);
-    double& operator()(int row, int col);
+    double& operator()(int rows, int cols);
+    double operator()(int rows, int cols) const;
 
     void ShowMatrix();
 };
+
+#endif UNTITLED_MATRIX_OOP_H
