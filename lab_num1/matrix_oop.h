@@ -7,7 +7,6 @@
 
 #include <cmath>
 
-#pragma once
 
 constexpr double EPS = 1e-7;
 
@@ -59,4 +58,4 @@ public:
     void ShowMatrix();
 };
 
-#endif UNTITLED_MATRIX_OOP_H
+#endif

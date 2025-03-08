@@ -298,3 +298,12 @@ double Matrix_opp::operator()(int rows, int cols) const {
     }
     return matrix_[rows][cols];
 }
+
+void Matrix_opp::ShowMatrix() {
+    for (int row = 0; row < rows_; ++row) {
+        for (int col = 0; col < cols_; ++col) {
+            std::cout << (*this)(row, col) << "\t";
+        }
+        std::cout << std::endl;
+    }
+}
