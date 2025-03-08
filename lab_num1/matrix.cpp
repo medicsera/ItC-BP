@@ -127,7 +127,7 @@ void Matrix_opp::MulNumber(const double num) {
 
 void Matrix_opp::MulMatrix(const Matrix_opp &other) {
     if (cols_ != other.rows_){
-        std::invalid_argument("Not correct matrix dimensions");
+        std::invalid_argument("Incorrect matrix dimensions");
     }
     Matrix_opp mul_matrix(rows_,other.cols_);
     for (int row = 0; row < rows_; ++row) {
@@ -156,7 +156,7 @@ Matrix_opp Matrix_opp::Transpose() {
 
 double Matrix_opp::Determinant() {
     if (rows_ != cols_){
-        throw std::out_of_range("Not correct matrix size");
+        throw std::out_of_range("Incorrect matrix size");
     }
     double determinant = 0;
     if (rows_ == 1){
@@ -173,7 +173,7 @@ double Matrix_opp::Determinant() {
 
 Matrix_opp Matrix_opp::CalcComplements() {
     if (rows_ != cols_){
-        throw std::out_of_range("Not correct matrix size");
+        throw std::out_of_range("Incorrect matrix size");
     }
     Matrix_opp calc_matrix(rows_,cols_);
     if (rows_ == 1){
@@ -191,7 +191,7 @@ Matrix_opp Matrix_opp::CalcComplements() {
 Matrix_opp Matrix_opp::InverseMatrix() {
     double determinant = Determinant();
     if (fabs(determinant) < EPS || rows_ != cols_){
-        throw std::out_of_range("Not correct matrix size");
+        throw std::out_of_range("Incorrect matrix size");
     }
     Matrix_opp inverse_matrix(rows_,cols_);
     if (rows_ == 1){
@@ -203,3 +203,98 @@ Matrix_opp Matrix_opp::InverseMatrix() {
     return  inverse_matrix;
 }
 
+// overloading operators
+
+Matrix_opp Matrix_opp::operator+(const Matrix_opp& other) {
+    Matrix_opp res_matrix(*this);
+    res_matrix.SumMatrix(other);
+    return res_matrix;
+}
+
+Matrix_opp Matrix_opp::operator-(const Matrix_opp& other) {
+    Matrix_opp res_matrix(*this);
+    res_matrix.SubMatrix(other);
+    return res_matrix;
+}
+
+Matrix_opp Matrix_opp::operator*(const double num) {
+    Matrix_opp res_matrix(*this);
+    res_matrix.MulNumber(num);
+    return res_matrix;
+}
+
+Matrix_opp Matrix_opp::operator*(const Matrix_opp& other) {
+    Matrix_opp res_matrix(*this);
+    res_matrix.MulMatrix(other);
+    return res_matrix;
+}
+
+bool Matrix_opp::operator==(const Matrix_opp& other) {
+    Matrix_opp res_matrix(*this);
+    return res_matrix.EqMatrix(other);
+}
+
+Matrix_opp Matrix_opp::operator=(const Matrix_opp& other) {
+    if (this == &other){
+        return *this;
+    }
+    MemoryDealocation();
+    rows_ = other.rows_;
+    cols_ = other.cols_;
+    MemoryAllocation();
+    for (int row = 0; row < rows_; ++row) {
+        for (int col = 0; col < cols_; ++col) {
+            matrix_[row][col] = other.matrix_[row][col];
+        }
+    }
+    return *this;
+}
+
+Matrix_opp Matrix_opp::operator=(Matrix_opp &&other) {
+    if (this == &other){
+        return *this;
+    }else{
+        MemoryDealocation();
+        rows_ = other.rows_;
+        cols_ = other.cols_;
+        matrix_ = other.matrix_;
+        other.rows_ = 0;
+        other.cols_ = 0;
+        other.matrix_ = nullptr;
+    }
+    return  *this;
+}
+
+Matrix_opp Matrix_opp::operator+=(const Matrix_opp &other) {
+    SumMatrix(other);
+    return *this;
+}
+
+Matrix_opp Matrix_opp::operator-=(const Matrix_opp &other) {
+    SubMatrix(other);
+    return *this;
+}
+
+Matrix_opp Matrix_opp::operator*=(const double num) {
+    MulNumber(num);
+    return *this;
+}
+
+Matrix_opp Matrix_opp::operator*=(const Matrix_opp &other) {
+    MulMatrix(other);
+    return *this;
+}
+
+double& Matrix_opp::operator()(int rows, int cols) {
+    if (rows < 0 || rows >= rows_ || cols < 0 || cols >= cols_){
+        throw std::out_of_range("Incorrect value");
+    }
+    return matrix_[rows][cols];
+}
+
+double Matrix_opp::operator()(int rows, int cols) const {
+    if (rows < 0 || rows >= rows_ || cols < 0 || cols >= cols_){
+        throw std::out_of_range("Incorrect value");
+    }
+    return matrix_[rows][cols];
+}

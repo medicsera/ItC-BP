@@ -47,6 +47,8 @@ public:
     Matrix_opp operator*(const Matrix_opp& other);
     bool operator==(const Matrix_opp& other);
     Matrix_opp operator=(const Matrix_opp& other);
+    Matrix_opp operator=(Matrix_opp&& other);
+
     Matrix_opp operator+=(const Matrix_opp& other);
     Matrix_opp operator-=(const Matrix_opp& other);
     Matrix_opp operator*=(const double other);
