@@ -5,7 +5,11 @@
 #ifndef UNTITLED_MATRIX_OOP_H
 #define UNTITLED_MATRIX_OOP_H
 
+#include <cmath>
+
 #pragma once
+
+constexpr double EPS = 1e-7;
 
 class Matrix_opp{
 private:

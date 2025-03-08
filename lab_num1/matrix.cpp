@@ -58,7 +58,7 @@ int Matrix_opp::get_rows() const {return rows_;}
 
 int Matrix_opp::get_cols() const {return cols_;}
 
-// operations
+// simple operations
 
 Matrix_opp Matrix_opp::Minor(int del_rows, int del_cols) {
     if (del_rows < 0 || del_rows >= rows_ || del_cols < 0 || del_cols >= cols_){
@@ -129,18 +129,77 @@ void Matrix_opp::MulMatrix(const Matrix_opp &other) {
     if (cols_ != other.rows_){
         std::invalid_argument("Not correct matrix dimensions");
     }
-    Matrix_opp mulmatrix(rows_,other.cols_);
+    Matrix_opp mul_matrix(rows_,other.cols_);
     for (int row = 0; row < rows_; ++row) {
         for (int col = 0; col < other.cols_; ++col) {
             double sum = 0;
             for (int i = 0; i < other.rows_; ++i) {
                 sum += matrix_[row][i] * other.matrix_[i][col];
             }
-            mulmatrix.matrix_[row][col] = sum;
+            mul_matrix.matrix_[row][col] = sum;
         }
     }
-    *this = mulmatrix;
+    *this = mul_matrix;
 }
 
+// operations
 
+Matrix_opp Matrix_opp::Transpose() {
+    Matrix_opp transpose_matrix(cols_,rows_);
+    for (int row = 0; row < rows_; ++row) {
+        for (int col = 0; col < cols_; ++col) {
+            transpose_matrix.matrix_[col][row] = matrix_[row][col];
+        }
+    }
+    return  transpose_matrix;
+}
+
+double Matrix_opp::Determinant() {
+    if (rows_ != cols_){
+        throw std::out_of_range("Not correct matrix size");
+    }
+    double determinant = 0;
+    if (rows_ == 1){
+        determinant = matrix_[0][0];
+    } else if (rows_ == 2){
+        determinant = matrix_[0][0] * matrix_[1][1] - matrix_[1][0] * matrix_[0][1];
+    } else {
+        for (int col = 0;col < cols_; ++col){
+            determinant += pow(-1,col + 2) * matrix_[0][col] * Minor(0,col).Determinant();
+        }
+    }
+    return determinant;
+}
+
+Matrix_opp Matrix_opp::CalcComplements() {
+    if (rows_ != cols_){
+        throw std::out_of_range("Not correct matrix size");
+    }
+    Matrix_opp calc_matrix(rows_,cols_);
+    if (rows_ == 1){
+        calc_matrix.matrix_[0][0] = matrix_[0][0];
+    } else {
+        for (int row = 0; row < rows_; ++row){
+            for (int col = 0; col < cols_; ++col){
+                calc_matrix.matrix_[row][col] = pow(-1,row + col) * Minor(row,col).Determinant();
+            }
+        }
+    }
+    return calc_matrix;
+}
+
+Matrix_opp Matrix_opp::InverseMatrix() {
+    double determinant = Determinant();
+    if (fabs(determinant) < EPS || rows_ != cols_){
+        throw std::out_of_range("Not correct matrix size");
+    }
+    Matrix_opp inverse_matrix(rows_,cols_);
+    if (rows_ == 1){
+        inverse_matrix.matrix_[0][0] = 1 / matrix_[0][0];
+    } else{
+        inverse_matrix = CalcComplements().Transpose();
+        inverse_matrix.MulNumber(1 / determinant);
+    }
+    return  inverse_matrix;
+}
 
