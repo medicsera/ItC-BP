@@ -1,0 +1,3 @@
+C:/Users/anton/Documents/GitHub/ItC-BP/lab_num1/cmake-build-debug/CMakeFiles/ItC-BP.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/lab_num1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/lab_num1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
