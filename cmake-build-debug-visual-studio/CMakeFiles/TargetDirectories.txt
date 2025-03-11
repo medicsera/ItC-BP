@@ -1,3 +1,0 @@
-C:/Users/anton/CLionProjects/cplusplus/cmake-build-debug-visual-studio/CMakeFiles/new_target.dir
-C:/Users/anton/CLionProjects/cplusplus/cmake-build-debug-visual-studio/CMakeFiles/ALL_BUILD.dir
-C:/Users/anton/CLionProjects/cplusplus/cmake-build-debug-visual-studio/CMakeFiles/ZERO_CHECK.dir

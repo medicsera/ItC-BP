@@ -1,6 +1,0 @@
-# ninja log v5
-0	360	7633770462721324	CMakeFiles/untitled1.dir/main.cpp.obj	1c54f5eb96ca0dbc
-361	488	7633770463971415	untitled1.exe	a0e3f49fb006a466
-2	456	7633771309230587	CMakeFiles/untitled1.dir/main.cpp.obj	1c54f5eb96ca0dbc
-13	499	7633771309652984	CMakeFiles/untitled1.dir/matrix.cpp.obj	df9e03e93e7c1d84
-499	597	7633771310592880	untitled1.exe	1e045b80f4f05d13
