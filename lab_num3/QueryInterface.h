@@ -12,7 +12,7 @@
 using namespace std;
 
 // Предварительное объявление идентификаторов интерфейса
-extern const IID IID_IX;
+extern const IID IID_IX;  // Для объявления глобальных переменных и функций, определенных в других файлах.
 extern const IID IID_IY;
 extern const IID IID_IZ;
 extern const IID IID_IUnknown1;

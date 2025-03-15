@@ -21,7 +21,7 @@ int main () {
 
     cout << "\nКлиент: получить указатель на IX" << endl;
     IX* pIX = NULL;
-    hr = pIUnknown->QueryInterface(IID_IX, (void**)&pIX);
+    hr = pIUnknown->QueryInterface(IID_IX, (void**)&pIX); // & Используется для передачи данных без копирования.
     if (SUCCEEDED(hr)) {
         cout << "Клиент: указатель на IX успешно получен" << endl;
         pIX->Fx(); // Использовать интерфейс IX
