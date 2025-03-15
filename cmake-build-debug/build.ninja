@@ -55,6 +55,12 @@ build CMakeFiles/lab1.main.dir/lab_num1/main.cpp.obj: CXX_COMPILER__lab1.2emain_
   OBJECT_DIR = CMakeFiles\lab1.main.dir
   OBJECT_FILE_DIR = CMakeFiles\lab1.main.dir\lab_num1
 
+build CMakeFiles/lab1.main.dir/lab_num1/matrix.cpp.obj: CXX_COMPILER__lab1.2emain_unscanned_Debug C$:/Users/anton/Documents/GitHub/ItC-BP/lab_num1/matrix.cpp || cmake_object_order_depends_target_lab1.main
+  DEP_FILE = CMakeFiles\lab1.main.dir\lab_num1\matrix.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\lab1.main.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab1.main.dir\lab_num1
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lab1.main
@@ -63,7 +69,7 @@ build CMakeFiles/lab1.main.dir/lab_num1/main.cpp.obj: CXX_COMPILER__lab1.2emain_
 #############################################
 # Link the executable lab1.main.exe
 
-build lab1.main.exe: CXX_EXECUTABLE_LINKER__lab1.2emain_Debug CMakeFiles/lab1.main.dir/lab_num1/main.cpp.obj
+build lab1.main.exe: CXX_EXECUTABLE_LINKER__lab1.2emain_Debug CMakeFiles/lab1.main.dir/lab_num1/main.cpp.obj CMakeFiles/lab1.main.dir/lab_num1/matrix.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\lab1.main.dir
