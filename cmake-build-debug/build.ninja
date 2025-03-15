@@ -178,6 +178,45 @@ build lab2.thirdExample.exe: CXX_EXECUTABLE_LINKER__lab2.2ethirdExample_Debug CM
   TARGET_IMPLIB = liblab2.thirdExample.dll.a
   TARGET_PDB = lab2.thirdExample.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target lab3.main
+
+
+#############################################
+# Order-only phony target for lab3.main
+
+build cmake_object_order_depends_target_lab3.main: phony || CMakeFiles/lab3.main.dir
+
+build CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj: CXX_COMPILER__lab3.2emain_unscanned_Debug C$:/Users/anton/Documents/GitHub/ItC-BP/lab_num3/main.cpp || cmake_object_order_depends_target_lab3.main
+  DEP_FILE = CMakeFiles\lab3.main.dir\lab_num3\main.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\lab3.main.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab3.main.dir\lab_num3
+
+build CMakeFiles/lab3.main.dir/lab_num3/QueryInterface.cpp.obj: CXX_COMPILER__lab3.2emain_unscanned_Debug C$:/Users/anton/Documents/GitHub/ItC-BP/lab_num3/QueryInterface.cpp || cmake_object_order_depends_target_lab3.main
+  DEP_FILE = CMakeFiles\lab3.main.dir\lab_num3\QueryInterface.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\lab3.main.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab3.main.dir\lab_num3
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target lab3.main
+
+
+#############################################
+# Link the executable lab3.main.exe
+
+build lab3.main.exe: CXX_EXECUTABLE_LINKER__lab3.2emain_Debug CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj CMakeFiles/lab3.main.dir/lab_num3/QueryInterface.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\lab3.main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lab3.main.exe
+  TARGET_IMPLIB = liblab3.main.dll.a
+  TARGET_PDB = lab3.main.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -212,6 +251,8 @@ build lab2.secondExample: phony lab2.secondExample.exe
 
 build lab2.thirdExample: phony lab2.thirdExample.exe
 
+build lab3.main: phony lab3.main.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -220,7 +261,7 @@ build lab2.thirdExample: phony lab2.thirdExample.exe
 #############################################
 # Folder: C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug
 
-build all: phony lab1.main.exe lab2.firstExample.exe lab2.secondExample.exe lab2.thirdExample.exe
+build all: phony lab1.main.exe lab2.firstExample.exe lab2.secondExample.exe lab2.thirdExample.exe lab3.main.exe
 
 # =============================================================================
 # Built-in targets

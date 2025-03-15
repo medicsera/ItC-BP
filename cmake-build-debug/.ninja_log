@@ -1,13 +1,24 @@
 # ninja log v5
 0	249	7635037405483970	CMakeFiles/firstExample.dir/lab_num2/FirstExample.cpp.obj	81a8563c6b62ff9f
-251	343	7635037406403914	firstExample.exe	df7a23b896dde54b
-0	240	7635037453113667	CMakeFiles/secondExample.dir/lab_num2/SecondExample.cpp.obj	f3d89804a3f17bda
 264	366	7635038013805676	lab2.firstExample.exe	b5c76ad942b40257
+0	240	7635037453113667	CMakeFiles/secondExample.dir/lab_num2/SecondExample.cpp.obj	f3d89804a3f17bda
+251	343	7635037406403914	firstExample.exe	df7a23b896dde54b
 241	333	7635037454005374	secondExample.exe	aa8270c01a378304
 0	247	7635037489047333	CMakeFiles/thirdExample.dir/lab_num2/ThirdExample.cpp.obj	95adf2e7eb70cb19
 247	337	7635037489915432	thirdExample.exe	9234176f9f3c69a1
 0	263	7635038012816047	CMakeFiles/lab2.firstExample.dir/lab_num2/FirstExample.cpp.obj	a7e9c3147f6b54fb
-0	156	7637184423610695	build.ninja	8e8eeb3749734775
 0	475	7637179940754201	CMakeFiles/lab1.main.dir/lab_num1/main.cpp.obj	62774f27142979fd
+1	162	7637201633226639	build.ninja	8e8eeb3749734775
 2	437	7637184341770684	CMakeFiles/lab1.main.dir/lab_num1/matrix.cpp.obj	74b93c2ec1c6c4ab
+11	1093	7637198479116780	CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj	d18b264fdbd0a31c
 437	529	7637184342660689	lab1.main.exe	17ada76159d8af4a
+2	959	7637202566446829	CMakeFiles/lab3.main.dir/lab_num3/QueryInterface.cpp.obj	b9042f4fb1eb0f51
+960	1137	7637202568197086	lab3.main.exe	2e3094411961d618
+2	964	7637203666926777	CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj	d18b264fdbd0a31c
+964	1039	7637203667666970	lab3.main.exe	2e3094411961d618
+2	1016	7637203735836777	CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj	d18b264fdbd0a31c
+1017	1100	7637203736647095	lab3.main.exe	2e3094411961d618
+2	957	7637204166566781	CMakeFiles/lab3.main.dir/lab_num3/QueryInterface.cpp.obj	b9042f4fb1eb0f51
+957	1033	7637204167308097	lab3.main.exe	2e3094411961d618
+2	963	7637204491196974	CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj	d18b264fdbd0a31c
+963	1040	7637204491938024	lab3.main.exe	2e3094411961d618
