@@ -14,15 +14,18 @@ public:
 class CA : public IX {
 public:
 
+// Данные экземпляра
     double m_Fx2;
     double m_Fx3;
     double m_Fx4;
 
+// Реализация интерфейса IX
     virtual void Fx1() { std::cout << "CA::Fx1" << std::endl; };
     virtual void Fx2() { std::cout << m_Fx2 << std::endl; };
     virtual void Fx3() { std::cout << m_Fx3 << std::endl; };
     virtual void Fx4() { std::cout << m_Fx4 << std::endl; };
 
+// Конструктор
     CA(double d) {
         m_Fx2 = d * d;
         m_Fx3 = d * d * d;

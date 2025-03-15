@@ -42,6 +42,7 @@ void foo(IX* pIX) {
     pIX->Fx2();
 };
 
+// Реализация интерфейса
 int main() {
     CA* pA = new CA(1.789);
 
