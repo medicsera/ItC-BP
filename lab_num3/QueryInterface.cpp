@@ -41,7 +41,7 @@
     HRESULT __stdcall CA::QueryInterface(const IID &iid, void **ppv) {
         if (iid == IID_IUnknown1) {
             cout << "QueryInterface: возвращаю указатель на IUnknown" << endl;
-            *ppv = static_cast<IX *>(this);
+            *ppv = static_cast<IX *>(this); // Используем static_cast для приведения указателя this к нужному типу интерфейса.
         } else if (iid == IID_IX) {
             cout << "QueryInterface: возвращаю указатель на IX" << endl;
             *ppv = static_cast<IX *>(this);
@@ -53,7 +53,7 @@
             *ppv = NULL;
             return E_NOINTERFACE;
         }
-        reinterpret_cast<IUnknown *>(*ppv)->AddRef();
+        reinterpret_cast<IUnknown *>(*ppv)->AddRef(); // Используется для приведения указателя на интерфейс к указателю на IUnknown.
         return S_OK;
     };
 
@@ -63,7 +63,7 @@
 
 // Функция создания компонента
     IUnknown* CreateInstance() {
-        IUnknown* pI = static_cast<IX*>(new CA);
+        IUnknown* pI = static_cast<IX*>(new CA); // Приводит указатель на CA к указателю на IX
         pI->AddRef();
         return pI;
     };
