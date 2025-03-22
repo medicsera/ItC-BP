@@ -211,6 +211,39 @@ build lab3.main.exe: CXX_EXECUTABLE_LINKER__lab3.2emain_Debug CMakeFiles/lab3.ma
   TARGET_IMPLIB = liblab3.main.dll.a
   TARGET_PDB = lab3.main.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target lab4.main
+
+
+#############################################
+# Order-only phony target for lab4.main
+
+build cmake_object_order_depends_target_lab4.main: phony || CMakeFiles/lab4.main.dir
+
+build CMakeFiles/lab4.main.dir/lab_num4/main.cpp.obj: CXX_COMPILER__lab4.2emain_unscanned_Debug C$:/Users/anton/Documents/GitHub/ItC-BP/lab_num4/main.cpp || cmake_object_order_depends_target_lab4.main
+  DEP_FILE = CMakeFiles\lab4.main.dir\lab_num4\main.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\lab4.main.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab4.main.dir\lab_num4
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target lab4.main
+
+
+#############################################
+# Link the executable lab4.main.exe
+
+build lab4.main.exe: CXX_EXECUTABLE_LINKER__lab4.2emain_Debug CMakeFiles/lab4.main.dir/lab_num4/main.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\lab4.main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lab4.main.exe
+  TARGET_IMPLIB = liblab4.main.dll.a
+  TARGET_PDB = lab4.main.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -247,6 +280,8 @@ build lab2.thirdExample: phony lab2.thirdExample.exe
 
 build lab3.main: phony lab3.main.exe
 
+build lab4.main: phony lab4.main.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -255,7 +290,7 @@ build lab3.main: phony lab3.main.exe
 #############################################
 # Folder: C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug
 
-build all: phony lab1.main.exe lab2.firstExample.exe lab2.secondExample.exe lab2.thirdExample.exe lab3.main.exe
+build all: phony lab1.main.exe lab2.firstExample.exe lab2.secondExample.exe lab2.thirdExample.exe lab3.main.exe lab4.main.exe
 
 # =============================================================================
 # Built-in targets
