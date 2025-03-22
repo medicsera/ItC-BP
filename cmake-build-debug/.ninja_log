@@ -1,6 +1,8 @@
 # ninja log v5
+1	311	7637280135724820	CMakeFiles/lab2.thirdExample.dir/lab_num2/ThirdExample.cpp.obj	18e6eaf93f372881
 0	249	7635037405483970	CMakeFiles/firstExample.dir/lab_num2/FirstExample.cpp.obj	81a8563c6b62ff9f
 264	366	7635038013805676	lab2.firstExample.exe	b5c76ad942b40257
+0	376	7637279868655624	CMakeFiles/lab2.secondExample.dir/lab_num2/SecondExample.cpp.obj	4d739d77c1e45d44
 0	240	7635037453113667	CMakeFiles/secondExample.dir/lab_num2/SecondExample.cpp.obj	f3d89804a3f17bda
 251	343	7635037406403914	firstExample.exe	df7a23b896dde54b
 241	333	7635037454005374	secondExample.exe	aa8270c01a378304
@@ -8,17 +10,12 @@
 247	337	7635037489915432	thirdExample.exe	9234176f9f3c69a1
 0	263	7635038012816047	CMakeFiles/lab2.firstExample.dir/lab_num2/FirstExample.cpp.obj	a7e9c3147f6b54fb
 0	475	7637179940754201	CMakeFiles/lab1.main.dir/lab_num1/main.cpp.obj	62774f27142979fd
-1	162	7637206451362772	build.ninja	8e8eeb3749734775
+1	228	7643249841336024	build.ninja	8e8eeb3749734775
 2	437	7637184341770684	CMakeFiles/lab1.main.dir/lab_num1/matrix.cpp.obj	74b93c2ec1c6c4ab
-2	963	7637204491196974	CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj	d18b264fdbd0a31c
+13	1034	7643248865528396	CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj	d18b264fdbd0a31c
 437	529	7637184342660689	lab1.main.exe	17ada76159d8af4a
-2	957	7637204166566781	CMakeFiles/lab3.main.dir/lab_num3/QueryInterface.cpp.obj	b9042f4fb1eb0f51
-963	1040	7637204491938024	lab3.main.exe	2e3094411961d618
-2	930	7637206490599303	CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj	d18b264fdbd0a31c
-931	1007	7637206491340508	lab3.main.exe	2e3094411961d618
-2	984	7637208977847920	CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj	d18b264fdbd0a31c
-984	1062	7637208978597785	lab3.main.exe	2e3094411961d618
-2	981	7637209244517040	CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj	d18b264fdbd0a31c
-981	1057	7637209245267040	lab3.main.exe	2e3094411961d618
-2	972	7637209392746256	CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj	d18b264fdbd0a31c
+3	1025	7643248865439163	CMakeFiles/lab3.main.dir/lab_num3/QueryInterface.cpp.obj	b9042f4fb1eb0f51
 973	1046	7637209393466420	lab3.main.exe	2e3094411961d618
+377	509	7637279869956882	lab2.secondExample.exe	f240ec1e18358097
+311	402	7637280136596770	lab2.thirdExample.exe	2cce7382a0263462
+2	82	7643249849047762	lab3.main.exe	a4d69b389bfedd09

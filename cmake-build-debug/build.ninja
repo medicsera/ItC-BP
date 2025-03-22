@@ -193,12 +193,6 @@ build CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj: CXX_COMPILER__lab3.2emain_
   OBJECT_DIR = CMakeFiles\lab3.main.dir
   OBJECT_FILE_DIR = CMakeFiles\lab3.main.dir\lab_num3
 
-build CMakeFiles/lab3.main.dir/lab_num3/QueryInterface.cpp.obj: CXX_COMPILER__lab3.2emain_unscanned_Debug C$:/Users/anton/Documents/GitHub/ItC-BP/lab_num3/QueryInterface.cpp || cmake_object_order_depends_target_lab3.main
-  DEP_FILE = CMakeFiles\lab3.main.dir\lab_num3\QueryInterface.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\lab3.main.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab3.main.dir\lab_num3
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lab3.main
@@ -207,7 +201,7 @@ build CMakeFiles/lab3.main.dir/lab_num3/QueryInterface.cpp.obj: CXX_COMPILER__la
 #############################################
 # Link the executable lab3.main.exe
 
-build lab3.main.exe: CXX_EXECUTABLE_LINKER__lab3.2emain_Debug CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj CMakeFiles/lab3.main.dir/lab_num3/QueryInterface.cpp.obj
+build lab3.main.exe: CXX_EXECUTABLE_LINKER__lab3.2emain_Debug CMakeFiles/lab3.main.dir/lab_num3/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\lab3.main.dir

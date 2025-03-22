@@ -3,42 +3,28 @@
 //
 
 #include <iostream>
+#include <unknwn.h>
 #include "QueryInterface.h"
 
-    // Определение IID
-// {32bb8320-b41b-11cf-a6bb-0080c7b2d682}
-    const IID IID_IX = // Для создания неизменяемых переменных
-            {0x32bb8320, 0xb41b, 0x11cf,
-             {0xa6, 0xbb, 0x0, 0x80, 0xc7, 0xb2, 0xd6, 0x82}
-            };
+interface IX : IUnknown {
+    virtual void _stdcall Fx() = 0;
+};
 
-// {32bb8321-b41b-11cf-a6bb-0080c7b2d682}
-    const IID IID_IY =
-            {0x32bb8321, 0xb41b, 0x11cf,
-             {0xa6, 0xbb, 0x0, 0x80, 0xc7, 0xb2, 0xd6, 0x82}
-            };
+interface IY : IUnknown {
+    virtual void _stdcall Fy() = 0;
+};
 
-// {32bb8322-b41b-11cf-a6bb-0080c7b2d682}
-    const IID IID_IZ =
-            {0x32bb8322, 0xb41b, 0x11cf,
-             {0xa6, 0xbb, 0x0, 0x80, 0xc7, 0xb2, 0xd6, 0x82}
-            };
+interface IZ : IUnknown {
+    virtual void _stdcall Fz() = 0;
+};
 
-// {32bb8323-b41b-11cf-a6bb-0080c7b2d682}
-    const IID IID_IUnknown1 =
-            {0x32bb8323, 0xb41b, 0x11cf,
-             {0xa6, 0xbb, 0x0, 0x80, 0xc7, 0xb2, 0xd6, 0x82}
-            };
+class CA : public IX, public IY {
+public:
 
-    ULONG __stdcall CA::AddRef() {
-        return 0;
-    };
+    virtual ULONG _stdcall AddRef() { return 0; };
+    virtual ULONG _stdcall Release() { return 0; };
 
-    ULONG __stdcall CA::Release() {
-        return 0;
-    };
-
-    HRESULT __stdcall CA::QueryInterface(const IID &iid, void **ppv) {
+    virtual HRESULT _stdcall QueryInterface(const IID &iid, void **ppv) {
         if (iid == IID_IUnknown1) {
             cout << "QueryInterface: возвращаю указатель на IUnknown" << endl;
             *ppv = static_cast<IX *>(this); // Используем static_cast для приведения указателя this к нужному типу интерфейса.
@@ -53,17 +39,19 @@
             *ppv = NULL;
             return E_NOINTERFACE;
         }
-        reinterpret_cast<IUnknown *>(*ppv)->AddRef(); // Используется для приведения указателя на интерфейс к указателю на IUnknown.
+        reinterpret_cast<IUnknown*>(*ppv)->AddRef(); // Используется для приведения указателя на интерфейс к указателю на IUnknown.
         return S_OK;
     };
 
-    void __stdcall CA::Fx() { cout << "CA::Fx" << endl; };
+    virtual void _stdcall Fx() { std::cout << "CA::Fx" << std::endl; };
+    virtual void _stdcall Fy() { std::cout << "CA::Fy" << std::endl; };
 
-    void __stdcall CA::Fy() { cout << "CA::Fy" << endl; };
+};
 
 // Функция создания компонента
-    IUnknown* CreateInstance() {
-        IUnknown* pI = static_cast<IX*>(new CA); // Приводит указатель на CA к указателю на IX
+     IUnknown* CreateInstance() {
+        IUnknown *pI = static_cast<IX*>(new CA); // Приводит указатель на CA к указателю на IX
         pI->AddRef();
         return pI;
     };
+
