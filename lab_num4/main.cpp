@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "QueryInterface2.cpp"
+#include "QueryInterface2.h"
 using namespace std;
 
 int main() {
