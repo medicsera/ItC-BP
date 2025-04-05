@@ -5,7 +5,7 @@
 #include <iostream>
 #include <unknwn.h>
 #include <objbase.h>
-#include "QueryInterface.cpp"
+#include "QueryInterface.h"
 
 using namespace std;
 
