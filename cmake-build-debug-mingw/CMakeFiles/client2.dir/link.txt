@@ -1,0 +1,3 @@
+D:\JetBrains\CLion2023.3\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\client2.dir/objects.a
+D:\JetBrains\CLion2023.3\bin\mingw\bin\ar.exe qc CMakeFiles\client2.dir/objects.a @CMakeFiles\client2.dir\objects1.rsp
+D:\JetBrains\CLion2023.3\bin\mingw\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\client2.dir/objects.a -Wl,--no-whole-archive -o client2.exe -Wl,--out-implib,libclient2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\client2.dir\linkLibs.rsp

@@ -1,0 +1,15 @@
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/lab1.main.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/lab2.firstExample.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/lab2.secondExample.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/lab2.thirdExample.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/lab3.main.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/lab4.main.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/lab5.main.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/cmpnt1.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/client1.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/cmpnt2.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/client2.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/cmpnt3.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/client3.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
+C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir

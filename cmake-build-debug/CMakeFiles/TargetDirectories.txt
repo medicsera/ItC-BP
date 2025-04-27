@@ -1,8 +1,0 @@
-C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug/CMakeFiles/lab1.main.dir
-C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug/CMakeFiles/lab2.firstExample.dir
-C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug/CMakeFiles/lab2.secondExample.dir
-C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug/CMakeFiles/lab2.thirdExample.dir
-C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug/CMakeFiles/lab3.main.dir
-C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug/CMakeFiles/lab4.main.dir
-C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/anton/Documents/GitHub/ItC-BP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
